@@ -1,7 +1,8 @@
 <h1>LIM_API</h1>
 
-<%= form_tag api_pages_path, method: :post, :remote => true do %>
+<%= form_tag api_pages_path, method: :post do %>
   <%= label_tag "Url", nil %>
-  <%= text_field_tag "url", nil, required: true, autofocus: true %>
+  <%= text_field_tag "url", nil, required: true, autofocus: true, 
+                      pattern: '(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?' %>
   <%= button_tag "Show Content", class: "btn btn-primary" %>
 <% end %>
