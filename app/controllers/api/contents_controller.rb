@@ -1,8 +1,12 @@
-class Api::ContentsController < ApplicationController
+require 'open-uri'
+
+class Api::PagesController < ApplicationController
   def create
-    @url = params[:url]
+    page_tmp_file = open(params[:url])
+    
   end
 
   def show
+    
   end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
-    resources :contents
+    resources :pages
   end
 
   root 'home#index'
